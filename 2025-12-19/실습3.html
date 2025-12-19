@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .box{
+            box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn {
+            width: 200px;
+            height: 100px;
+            border: none;
+            border-radius: 12px;
+            background-color: blue;
+            color: white;
+            /* 세로로 10px 내리고 20px만큼 크게 퍼트림 */
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            cursor:pointer;
+            /*서서히 변환*/
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background-color: aqua;
+            /* [요구사항 2] 마우스 올렸을 때: 안쪽 그림자(inset) */
+            /* 위치: 2px 2px, 흐림: 5px */
+            box-shadow: inset 2px 2px 5px rgba(0,0,0,0.3);
+        }
+        
+    </style>
+    
+</body>
+<h2>실습7</h2>
+    <div class="box">
+        그림자 효과 적용
+    </div>
+
+    <h2>플로팅 버튼</h2>
+    <div class="btn">
+        플로팅 버튼
+    </div>
+</html>

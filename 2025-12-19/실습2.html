@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: white;
+        color: black;
+    }
+    @media screen and (max-width : 500px) {
+        body {
+            background-color: black;
+            color: white;
+        }
+    }
+
+    .product{
+        width: 50%;
+        background-color: lightgray;
+    }
+    .container{
+        display: flex;
+        /*자식이 넘치면 다음줄로 넘기기*/
+        flex-wrap: wrap;
+        /*gap: 10px;*/
+    }
+    @media screen and (max-width: 600px) {
+        .product{
+            width: 100%;
+            background-color: pink;
+        }
+    }
+</style>
+<body>
+    <h2>화면 넓이를 500px이하이면 다크모드 흉내내기</h2>
+    <p>500px이하이면 다크모드 변환됩니다</p>
+
+    <h2>Product</h2>
+    <div class="container">
+        <div class="product">상품1</div>
+        <div class="product">상품2</div>    
+        <div class="product">상품3</div>
+        <div class="product">상품4</div>
+        <div class="product">상품5</div>
+        <div class="product">상품6</div>
+    </div>
+</body>
+</html>

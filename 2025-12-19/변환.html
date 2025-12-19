@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .card{
+        width: 200px;
+        height: 100px;
+        background-color: gold;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+
+        transition: transform 0.3s , box-shadow 0.3s;
+    }
+
+    .card:hover {
+        transform: scale(1.2);
+        box-shadow: 0px 10px 120px rgba(0,0,0,0.2);  
+    }
+</style>
+<body>
+    <h2>변환 효과 주기</h2>
+    <div class="card">
+        카드 내용 변환 효과 적용
+    </div>
+    
+</body>
+</html>
