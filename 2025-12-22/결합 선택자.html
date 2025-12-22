@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+
+<style>
+/* parent 안의 모든 p 선택 */
+.parent p { color: gray; }
+
+/* parent 바로 밑의 p만 선택 (손자 제외) */
+.parent > p { font-weight: bold; }
+
+/* .target 바로 다음에 오는 p 하나만 선택 (형제 1) */
+.target + p { color: red; }
+
+/* .target 뒤에 오는 모든 p 형제들 선택 (형제 1, 2) */
+.target ~ p { background-color: yellow; }
+</style>
+</head>
+<body>
+    <div class="parent">
+<p>자식 1</p>
+<span>
+<p>손자 (자식 선택자 > 에는 선택 안 됨)</p>
+</span>
+<p class="target">자식 2</p>
+<p>자식 2의 형제 1</p>
+<p>자식 2의 형제 2</p>
+</div>
+    
+</body>
+</html>

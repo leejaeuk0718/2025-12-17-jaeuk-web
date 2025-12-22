@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <a href="https://naver.com">네이버</a>
+
+<a href="image_01.jpg">이미지 파일</a>
+<a href="manual.pdf">설명서 PDF</a>
+
+<style>
+/* href에 "https"가 포함된 링크는 외부 링크 아이콘 표시 */
+a[href*="https"] {
+     color: green; font-weight: bold; 
+    }
+
+/* .pdf로 끝나는 링크 옆에 (PDF) 텍스트 추가 */
+a[href$=".pdf"]::after {
+     content: " (PDF 문서)"; color: red; font-size: 12px;
+      }
+</style>
+</head>
+<body>
+    
+</body>
+</html>

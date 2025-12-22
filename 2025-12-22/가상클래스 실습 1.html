@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    li:nth-child(2){
+        background-color: lightblue;
+        color: red;
+        font-weight: bold;
+        border: 2px solid green;
+    }
+
+    .new-product{
+        font-size: 20px;
+        color: red;
+        font-weight: bold ;
+    }
+
+    .new-product::before{
+        content: 'NEW! '; /* 내용 필수! */
+        color: black;
+        margin-right: 5px;
+    }
+    </style>
+</head>
+<body>
+    <br><br>
+    <h2>실습 1</h2>
+    <ul>
+        <li>첫번째 아이템(first item)</li>
+        <li>두번째 아이템</li>
+        <li>세번째 아이템</li>
+    </ul>
+    <h2>실습 2</h2>
+<div class="new-product">새로운 상품</div>
+    <br><br>
+</body>
+</html>
