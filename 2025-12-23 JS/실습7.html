@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="nameInput" placeholder="이름을 입력하세요">
+    <button id="alertBtn">알림창 버전</button>
+    <script>
+        const Input = document.getElementById('nameInput');
+        const alertBtn = document.getElementById('alertBtn');
+
+        alertBtn.addEventListener('click', function() {
+            const name = Input.value;
+            alert('안녕하세요, ' + name + '님!');
+        }); 
+    </script>
+
+    <input type="number" id="num1" placeholder="첫 번째 숫자를 입력하세요">
+    <input type="number" id="num2" placeholder="두 번째 숫자를 입력하세요">
+    <button id="sumBtn">합계 구하기</button>
+    <script>
+        const num1Input = document.getElementById('num1');
+        const num2Input = document.getElementById('num2');
+        const sumBtn = document.getElementById('sumBtn');
+
+        sumBtn.addEventListener('click', function() {
+            const num1 = parseFloat(num1Input.value);
+            const num2 = parseFloat(num2Input.value);
+            const sum = num1 + num2;
+            alert('두 숫자의 합은: ' + sum);
+        });
+    </script>
+
+    <input type="text" id="liveInput" placeholder="여기에 입력하며 즉시 반영됩니다">
+    <p>
+        실시간 반영: <span id="liveOutput"></span>
+    </p>
+    <script>
+        const liveInput = document.getElementById('liveInput');
+        const liveOutput = document.getElementById('liveOutput');
+
+        liveInput.addEventListener('input', function() {
+            liveOutput.innerText = liveInput.value;
+        });
+    </script>
+</body>
+</html>
