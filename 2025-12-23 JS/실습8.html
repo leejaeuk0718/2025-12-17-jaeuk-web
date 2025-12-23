@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="itemInput" placeholder="상품명을 입력하세요">
+    <button id="addBtn">담기</button>
+    <ul id="itemList"></ul>
+    <script>
+
+    // 1. 필요한 HTML 요소들을 변수에 저장하기
+const itemInput = document.getElementById('itemInput'); // 입력창
+const addBtn = document.getElementById('addBtn');       // 담기 버튼
+const itemList = document.getElementById('itemList');   // ul 태그
+
+// 상품을 담을 배열 선언
+let cart = [];
+
+// 2. 버튼 클릭 이벤트 리스너 설정
+addBtn.addEventListener('click', function() {
+    // 입력창에 적힌 값 가져오기
+    let newItem = itemInput.value;
+
+    // (선택사항) 입력값이 비어있지 않을 때만 실행
+    if (newItem !== "") {
+        // [1단계] 배열에 데이터 추가
+        cart.push(newItem);
+
+        // [2단계] 화면(ul 태그 내부)에 li 태그 추가
+        // += 를 사용해야 기존 목록 뒤에 계속 붙습니다.
+        itemList.innerHTML += "<li>" + newItem + "</li>";
+
+        // (선택사항) 입력창 비우기
+        itemInput.value = "";
+    }
+});
+    </script>
+    
+</body>
+</html>

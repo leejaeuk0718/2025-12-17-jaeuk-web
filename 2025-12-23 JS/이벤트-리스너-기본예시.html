@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="title">여기를 보세요!</h1>
+    <button id="changeBtn">색상 변경 마법</button>
+
+    <script>
+        // 1. 요소 잡아오기 (변수에 저장)
+        const myTitle = document.getElementById('title');
+        const myBtn = document.getElementById('changeBtn');
+
+        // 2. 버튼에 '경비원(리스너)' 붙이기\
+        //요소.addEventListener('어떤사건', 할일_함수);
+        myBtn.addEventListener('click', function () {
+            // 3. 클릭되었을 때 실행할 코드
+            myTitle.style.color = 'blue';
+            myTitle.style.backgroundColor = 'yellow';
+            alert('색상이 변경되었습니다!'); // 알림창 띄우기
+        });
+    </script>
+</body>
+
+</html>

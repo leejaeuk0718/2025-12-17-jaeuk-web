@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="modeBtn">다크모드 켜기</button>
+    <h1 id="text">안녕하세요!</h1>
+    <script>
+        const btn = document.getElementById('modeBtn');
+        let isDarkMode = false;
+
+        btn.addEventListener('click', function() {
+            if (isDarkMode == true) {
+                // 다크모드가 켜져 있을 때, 끄기
+                isDarkMode = false;
+                document.body.style.backgroundColor = 'white';
+                document.body.style.color = 'black';
+                btn.textContent = '다크모드 켜기';
+                return;
+            } else {
+                // 다크모드가 꺼져 있을 때, 켜기
+                isDarkMode = true;
+                document.body.style.backgroundColor = 'black';
+                document.body.style.color = 'white';
+                btn.textContent = '다크모드 끄기';
+            }
+        }); 
+    </script>
+    
+</body>
+</html>

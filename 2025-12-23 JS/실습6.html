@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="password" id="passInput" value="mypassword123">    
+    <button id="viewBtn">비밀번호 보기</button>
+    <script>
+        const btn = document.getElementById('viewBtn');
+        const input = document.getElementById('passInput');
+        let isPasswordVisible = false;
+
+        btn.addEventListener('click', function() {
+            if (isPasswordVisible === false) {
+                // 비밀번호가 숨겨져 있을 때, 보이기
+                isPasswordVisible = true;
+                input.type = 'text';
+                btn.textContent = '비밀번호 숨기기';
+            } else {
+                // 비밀번호가 보일 때, 숨기기
+                isPasswordVisible = false;
+                input.type = 'password';
+                btn.textContent = '비밀번호 보기';
+                
+            }
+        });
+        
+    </script>
+</body>
+</html>
