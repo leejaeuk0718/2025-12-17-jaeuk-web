@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> 실습1</h2>
+<ul id="item.Price"></ul>
+<script>
+    const menus = [
+    { name: "비빔밥", price: 8000 },
+    { name: "김치찌개", price: 7500 },
+    { name: "돈까스", price: 9000 }
+];
+    const listContainer = document.getElementById('menuList');
+    menus.forEach(function(menu) {
+        console.log(menu.name + " : " + menu.price + "원");
+        listContainer.innerHTML += "<li>" + menu.name + " : " + menu.price + "원</li>";
+    });
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>추천 상품</h2>
+<div id="product-container">
+</div>
+<script>    
+    const items = [
+{
+name: "맥북 프로",
+price: 3000000,
+color: "실버"
+},
+{ name: "아이패드", price: 1000000, color: "그레이" },
+{ name: "에어팟", price: 300000, color: "화이트" }
+];
+
+// 2. 화면 요소 가져오기
+const container = document.getElementById('product-container');
+
+// 3. 반복문으로 HTML 만들기 (마법의 구간!)
+items.forEach(function(item) {
+// item은 배열 안의 객체 하나하나를 의미합니다.
+// 첫 번째 바퀴: item = { name: "맥북 프로"... }
+
+// HTML을 계속 이어 붙입니다 (+=)
+container.innerHTML += "<div style='border: 1px solid #ccc; padding: 10px; margin: 10px;'>" +
+                       "<h3>" + item.name + "</h3>" +
+                       "<p>가격: " + item.price.toLocaleString() + "원</p>" +
+                       "<p>색상: " + item.color + "</p>" +
+                       "</div>";
+});
+</script>
+    
+</body>
+</html>

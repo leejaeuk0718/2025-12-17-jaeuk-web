@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>여행지 버킷리스트</h2>
+<div id="travel-list" style="display: flex;"></div>
+    <script>
+       const places = [
+            { city: "파리", img: "/2025-12-24 JS/image(파리).jpg" },
+            { city: "뉴욕", img: "/2025-12-24 JS/image(뉴욕).jpg"},
+            { city: "서울", img: "/2025-12-24 JS/image(서울).jpg" }
+        ];
+
+const travelContainer = document.getElementById('travel-list');
+places.forEach(function(place) {
+    travelContainer.innerHTML += 
+        "<div style='margin-right: 20px; text-align: center;'>" +
+        "<img src='" + place.img + "' alt='" + place.city + "' style='width: 200px; height: 150px; object-fit: cover;'><br>" +
+        "<span>" + place.city + "</span>" +
+        "</div>";
+});
+    </script>
+        
+    
+</body>
+</html>
+
+
+
+                        

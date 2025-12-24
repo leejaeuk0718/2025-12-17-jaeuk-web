@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>맛있는 과일 목록</h2>
+<ul id="fruitList">
+</ul>
+<script>    
+const fruits = ["사과", "바나나", "포도", "수박"];
+const listContainer = document.getElementById('fruitList');
+
+// fruits 배열의 개수(4개)만큼 반복합니다.
+fruits.forEach(function(item) {
+// 1. item에는 "사과", 그 다음엔 "바나나"... 순서대로 들어옵니다.
+console.log("꺼낸 과일: " + item);
+
+// 2. HTML에 태그를 더해서 추가합니다. (+= 는 '덧붙이기' 입니다)
+// 결과적으로 <li>사과</li> <li>바나나</li> ... 가 생성됩니다.
+listContainer.innerHTML += "<li>" + item + "</li>";
+});
+</script>
+    
+</body>
+</html>

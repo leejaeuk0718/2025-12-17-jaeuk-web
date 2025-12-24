@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="profileCard"></div>
+    <script>
+        const developer = {
+name: "김코딩",
+role: "웹 개발자",
+skills: ["HTML", "CSS", "JavaScript"],
+isLeader: true
+};
+const card = document.getElementById('profileCard');
+card.innerHTML = "<h2>" + developer.name + "</h2>" +
+                 "<p>역할: " + developer.role + "</p>" +
+                 "<p>기술 스택: " + developer.skills.join(", ") + "</p>" +
+                 "<p>팀장 여부: " + (developer.isLeader ? "예" : "아니오") + "</p>";
+</script>
+    <div id="postBox"></div>
+    <button id="likeBtn">좋아요 누르기</button>
+    <script>
+        const post = {
+            title: "오늘의 일기", likes: 0
+        }
+        const postBox = document.getElementById('postBox');
+        const likeBtn = document.getElementById('likeBtn'); 
+        function updatePost() {
+            postBox.innerHTML = "<h3>" + post.title + "</h3>" +
+                                "<p>좋아요: " + post.likes + "</p>";
+        }
+        updatePost();
+        likeBtn.addEventListener('click', function() {
+            post.likes ++;
+            updatePost();
+        });
+    </script>
+
+</body>
+</html>
